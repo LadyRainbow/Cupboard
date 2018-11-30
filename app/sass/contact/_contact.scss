@@ -1,0 +1,329 @@
+section.contact {
+    color: $grayFont;
+    width: 100%;
+    height: calc(100vh - 71px);
+    @include calc-height(padding-top, 47);
+    .content {
+        height: 100%;
+    }
+    .contacts-block {
+        position: relative;
+        width: 720px;
+        height: 100%;
+        z-index: 2;
+        h1 {
+            font-family: 'gothamPro-black';
+            font-size: 40px;
+            line-height: 34px;
+            color: $black;
+            padding-bottom: 42px;
+        }
+
+        .phone-mail-wrp {
+            position: relative;
+            padding-left: 29px;
+            margin-bottom: 43px;
+            .phone-mail {
+                position: relative;
+                padding-left: 61px;
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: 'gothamPro-bold';
+                p {
+                    &:first-child {
+                        font-size: 18px;
+                        color: $black;
+                    }
+                    &:last-child {
+                        color: $goldFont;
+                    }
+                }
+                a {
+                    color: $goldFont;
+                    font-size: 14px;
+                    display: inline-block;
+                    border-bottom: 1px solid $goldBorder;
+                    width: 174px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    background-size: contain;
+                }
+                &.phone {
+                    &::before {
+                        background: url('../img/ring.png') center no-repeat;
+                    }
+                }
+                &.mail {
+                    &::before {
+                        background: url('../img/mail.png') center no-repeat;
+                    }
+                }
+                & + .phone-mail {
+                    margin-top: 29px;
+                }
+            }
+            &::after {
+                content: url('../img/dots1.png');
+                position: absolute;
+                bottom: -110px;
+                right: 100px;
+            }
+        }
+        .contact-form {
+            position: relative;
+            display: flex;
+            padding-top: 42px;
+            padding-left: 54px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(235, 235, 235);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 15px 28px 0px rgba(0, 0, 0, 0.1);
+            width: 714px;
+            height: 265px;
+            .form-subitle {
+               font-family: 'gothamPro-bold';
+               line-height: 26px;
+               color: #cca464;
+            }
+            .inputs-wrp {
+                width: 260px;
+                display: inline-block;
+                margin-right: 20px;
+                .input-wrp + .input-wrp {
+                    margin-top: 16px;
+                }
+                & + .input-wrp {
+                    margin-right: 20px;
+                }
+            }
+            .input-wrp {
+                display: inline-block;
+                width: 260px;
+            }
+          .form-input {
+              display: inline-block;
+              width: 260px;
+              border-style: solid;
+              border-width: 1px;
+              border-color: #dfdfdf;
+              border-radius: 4px;
+              background-color: white;
+              height: 50px;
+              padding: 0 19px;
+              line-height: 16px;
+              color: #6f6e6e;
+              &.form-input-textarea {
+                  height: 141px;
+                  padding-top: 15px;
+              }
+              &:focus {
+                  border-color: $goldBorder;
+              }
+          }
+          .btn-wrp {
+              position: relative;
+              margin-top: 26px;
+              width: 46px;
+              height: 141px;
+              border-radius: 18px;
+              .send-order-btn {
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 2;
+                  background: transparent;
+              }
+              &::before {
+                  content: '';
+                  width: 23px;
+                  height: 25px;
+                  position: absolute;
+                  top: calc(50% - 12px);
+                  left: calc(50% - 12px);
+                  background: url('../img/telegram.png') center no-repeat;
+                  z-index: 1;
+              }
+          }
+          &::before {
+              content: url('../img/map-girl.png');
+              position: absolute;
+              top: -270px;
+              right: 140px;
+              z-index: 1;
+          }
+        }
+        .copyright {
+            position: absolute;
+            left: 0;
+            bottom: 24px;
+            font-size: 12px;
+        }
+    }
+    .map-block {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: calc(45% - 0px);
+        background: url('../img/map.png') center no-repeat;
+        background-size: cover;
+    }
+}
+section.contact-mob {
+    padding-top: 40px;
+    .catalog-title {
+        @extend %title;
+        padding-bottom: 33px;
+    }
+    .phone-mail-wrp {
+        padding-bottom: 47px;
+    }
+    .contact-form-mob-wrp {
+        position: relative;
+        padding-top: 222px;
+        &::before {
+            width: 192px;
+            height: 251px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(50% - 96px);
+            background: url('../img/map-girl.png');
+            background-size: cover;
+            z-index: 3;
+        }
+    }
+    .contact-form-mob {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 19px;
+        width: 100%;
+        padding: 50px 16px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(235, 235, 235);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 15px 28px 0px rgba(0, 0, 0, 0.1);
+        .form-subitle {
+            font-family: 'gothamPro-bold';
+            line-height: 26px;
+            color: $goldFont;
+        }
+        .form-input {
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(223, 223, 223);
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            height: 50px;
+            padding: 0 19px;
+            line-height: 16px;
+            color: $grayFont;
+            &:focus {
+                border-color: $goldBorder;
+            }
+            &.form-input-time {
+                text-align: center;
+            }
+            &.form-input-textarea {
+                height: 149px;
+                padding-top: 15px;
+            }
+        }
+        input {
+            width: 100%;
+            &.send-order-btn {
+                @extend %BTN;
+                color: $white;
+                margin-top: 44px;
+            }
+        }
+        .input-wrp + .input-wrp {
+            padding-top: 16px;
+        }
+        .inputs-wrp + .input-wrp {
+            padding-top: 16px;
+        }
+    }
+    .contact-form-mob-wrp {
+        position: relative;
+
+    }
+    .warning {
+        position: relative;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        a {
+            color: $goldFont;
+        }
+    }
+    .phone-mail {
+        position: relative;
+        padding-left: 61px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'gothamPro-bold';
+        p {
+            &:first-child {
+                font-size: 18px;
+                color: $black;
+            }
+            &:last-child {
+                color: $goldFont;
+            }
+        }
+        a {
+            color: $goldFont;
+            font-size: 14px;
+            display: inline-block;
+            border-bottom: 1px solid $goldBorder;
+            width: 174px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+        }
+        &.phone {
+            &::before {
+                background: url('../img/ring.png') center no-repeat;
+            }
+        }
+        &.mail {
+            &::before {
+                background: url('../img/mail.png') center no-repeat;
+            }
+        }
+        & + .phone-mail {
+            margin-top: 29px;
+        }
+        &.map {
+            &::before {
+                background: url('../img/map-icon.png') center no-repeat;
+            }
+            p {
+                &:last-child {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+}

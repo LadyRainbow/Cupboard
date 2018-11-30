@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Capboard</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../build/css/bootstrap.css">
+  <link rel="stylesheet" href="../../build/css/swiper.css">
+  <link rel="stylesheet" href="../../build/css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="../../build/libs/countdown/jquery.countdown.css">
+  <link rel="stylesheet" href="../../build/libs/selectize/selectize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="../../build/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="collector-overlay-wrapper">
+            <div class="overlay-pop-up"></div>
+            <div class="collector">
+    <div class="collectorName">Калькулятор стоимости мебели</div>
+    <div class="collectorStepsIndicatorWrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="collectorStepCounterName"></div>
+    <div class="collectorStepActionName"></div>
+
+    <div class="collectorStepsWrapper">
+        <div class="collectorStep first-card">
+            step1
+        </div>
+        <div class="collectorStep second-card">
+            step2
+        </div>
+        <div class="collectorStep third-card">
+            step3
+        </div>
+        <div class="collectorStep fourth-card">
+            <div class="collectorDynamicContentWrapperStep4"></div>
+            <div class="scrolls-wrp">
+                <div class="scroll-wrp mCustomScrollbar chipboard-scroll">
+                    <p class="scroll-title">Преимущества фасадов из ДСП</p>
+                    <p class="description"></p>
+                </div>
+                <div class="scroll-wrp mCustomScrollbar glass-scroll">
+                    <p class="scroll-title">Преимущества фасадов из стекла</p>
+                    <p class="description"></p>
+                </div>
+                <div class="scroll-wrp mCustomScrollbar combined-scroll">
+                    <p class="scroll-title">Преимущества комбинированных фасадов</p>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="scroll-wrp mCustomScrollbar MDF-scroll">
+                    <p class="scroll-title">Преимущества фасадов из МДФ</p>
+                    <div class="description">
+                        <p><b>Экологичность.</b> МДФ изготавливается из натуральных древесных стружек без включения химических веществ, вредных для здоровья. Опасные соединения не выделяются даже в процессе нагревания материала, так как их просто нет в составе, стружка скрепляется природным клеем.</p>
+                        <p><b>Безграничные дизайнерские возможности.</b> Мы осуществляем изготовление кухни из МДФ на заказ в любой цветовой гамме: от классических белых, зеленых и оранжевых до нестандартных фиолетовых, черных и прочих. В нашем каталоге представлены модели в классическом и hi-tech стиле, с закругленными формами и прямыми линиями, с открытыми и закрытыми шкафами. Также мы готовы разработать проект под ваши индивидуальные требования.</p>
+                        <p><b>Повышенная износостойкость.</b> Мебельная фабрика «КаонСнаб» предлагает кухни с фасадами, покрытыми ПВХ-пленкой, эмалью и др. Материалы обеспечивают хорошие эксплуатационные характеристики мебели. Шкафы не меняют свой цвет под действием солнечных лучей, устойчивы к перепадам температуры – не расслаиваются и сохраняют форму долгое время.</p>
+                        <p><b>Легкость в обслуживании. </b>МДФ не требует использования специальных чистящих средств, достаточно периодически протирать поверхность мыльным раствором.</p>
+                    </div>
+                </div>
+                <div class="scroll-wrp mCustomScrollbar plastic-scroll">
+                    <p class="scroll-title">Преимущества фасадов из пластика</p>
+                    <div class="description">
+                        <p>Кухни из пластика за счет использования новейших технологий производства обладают рядом неоспоримых достоинств.</p>
+                        <p><b>Высокая прочность.</b> Корпуса мебели из пластика устойчивы к истиранию, впитыванию жира и запахов, образованию налета. Плотная многослойная структура материала обеспечивает высокую сопротивляемость любым повреждениям.</p>
+                        <p><b>Стойкость к деформации.</b> Влагоотталкивающие свойства пластика, а также его высокая устойчивость к воздействию моющих средств исключают возможность разбухания каркаса мебели и провисания дверей.</p>
+                        <p><b>Доступная цена.</b> В отличие от мебели из натуральных материалов, даже дизайнерская кухня из пластика будет стоить недорого.</p>
+                        <p><b>Неограниченные возможности дизайна.</b> Прекрасная сочетаемость с другими материалами, многообразие цветовых решений и форм позволяет создавать самые оригинальные конструкции.</p>
+                    </div>
+                </div>
+                <div class="scroll-wrp mCustomScrollbar membrane-scroll">
+                    <p class="scroll-title">Преимущества фасадов из пленки ПВХ</p>
+                    <div class="description">
+                        <p><b>Стойкость к механическим повреждениям.</b> Слой пластика надежно предохраняет фасад кухни от сколов, царапин и ударов. Такую поверхность сложно повредить ножом, на нее можно ронять тяжелые вещи – это практически не отразится на ее блестящем внешнем виде.</p>
+                        <p><b>Жаропрочность.</b> На пластиковые поверхности можно спокойно ставить горячие кастрюли и емкости со льдом. От этого они не потрескаются, не расслоятся и не покроются пятнами.</p>
+                        <p><b>Широкая гамма цветовых решений.</b> Собираясь купить кухню из ПВХ, можно не переживать за то, насколько органично она будет смотреть в вашей квартире. Пластиковые фасады легко вписываются в любой интерьер, от классического оформления до футуристических мотивов. А возможность печати на них фотографий и других изображений сделает ваш гарнитур уникальным и неповторимым.</p>
+                        <p><b>Высокая устойчивость к влаге, плесени, вредителям, солнечным лучам и бытовой химии.</b> Пластик не впитывает воду, не выгорает. Этот материал очень гигиеничен: ему не страшны насекомые, грибки и микроорганизмы, а любое загрязнение убирается с помощью губки и мыльной воды.</p>
+                        <p><b>Длительный срок службы.</b> Прочность внешнего покрытия гарантирует беспроблемную эксплуатацию гарнитуров на протяжении многих лет. При этом уход за кухнями из ПВХ минимален.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collectorStep form-block">
+            <p class="form-subitle">Как Вас зовут?</p>
+            <input class="nameInput form-input" type="text" placeholder="Иванов Иван Иванович" name="" value="">
+            <p class="form-subitle">Номер телефона</p>
+            <input class="phoneInput form-input" type="tel" placeholder="+7 (___) ___-__-__">
+            <!-- <input class="phoneInput form-input form-input-phone" type="tel" placeholder="+7 (___) ___-__-__"> -->
+            <div class="collectorSendBtn gold-gradient">Отправить</div>
+            <p class="warning">Нажимая кнопку «Отправить», я даю согласие на <a href="#">обработку своих персональных данных</a></p>
+        </div>
+    </div>
+
+    <div class="collectorNextStepBtn gold-gradient"><p>Перейти к следующему шагу</p></div>
+    <div class="btn-close-pop-up gold-gradient"></div>
+</div>
+
+        </div>
+        <div class="desctop">
+            <div class="celebrate-wrp">
+                <section class="celebrate">
+    <div class="celebrate-overlay"></div>
+    <div class="celebrate-block">
+        <p class="title">Поздравляем!</p>
+        <p class="text">Вы стали 100 посетителем сайта <span>shkafikuhni77.ru</span> <br> Назовите данный промо код менеджеру <br>и получите дополнительную скидку</p>
+        <div class="promo-code-wrp">
+            <p>Промокод:</p>
+            <div class="promo-code">
+                <span>2105</span>
+            </div>
+        </div>
+        <p class="remain">Боитесь забыть промокод? Звоните прямо сейчас</p>
+        <p class="phone">8 (800) 800 80 80</p>
+        <div class="btn-close-pop-up gold-gradient"></div>
+    </div>
+</section>
+
+            </div>
+            <div class="desctop-content-wrp">
+                <div class="menu-wrapper">
+                    <div class="menu">
+    <div class="menu-sidebar gold-gradient">
+        <div class="menu-burger-substrate">
+            <div class="menu-burger-wrp">
+                <div class="menu-burger"></div>
+            </div>
+        </div>
+        <div class="acc-list-wrp">
+            <ul class="acc-list">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-content gold-gradient">
+        <div class="content">
+            <div class="current-page-title-block">
+                <p class="current-page-title"><span>Главная</span></p>
+            </div>
+            <div class="list-block">
+                <ul class="menu-list">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Мебельные решения</a></li>
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Наши работы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <div class="header-wrapper">
+                    <header class="header-fixed header-fixed-show">
+    <div class="content">
+        <div class="header">
+            <div class="logo-block">
+                <img src="../../build/img/logo.png" alt="logo" class="logo-img">
+                <p>Шкафы<br>& Кухни</p>
+            </div>
+            <div class="contacts-block">
+                <div class="phone-wrp">
+                    <div class="ring">
+                        <img src="../../build/img/call.svg" alt="phone" class="phone-img">
+                    </div>
+                    <p class="ring-text">8 (800) 800-80-80</p>
+                </div>
+                <div class="schedule-wrp">
+                    <div class="ring">
+                        <span>24/7</span>
+                    </div>
+                    <p class="ring-text">Без выходных</p>
+                </div>
+                <div class="btns-header-wrp">
+                    <div class="btn-order-call btn-consultation">Заказать звонок</div>
+                    <div class="btn-calc-value gold-gradient">Рассчитать стоимость</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+                </div>
+
+                <div class="pages-wrapper">
+                    <section class="contact">
+    <div class="content">
+        <div class="contacts-block">
+            <h1>Контакты</h1>
+            <div class="phone-mail-wrp">
+                <div class="phone-mail phone">
+                    <p>8 (800) 800 80 80</p>
+                    <p>С 00:00 — до 00:00</p>
+                </div>
+                <div class="phone-mail mail">
+                    <p>shkafikuhni77@mail.ru</p>
+                    <a href="mailto:shkafikuhni77@mail.ru">Напишите нам на почту</a>
+                </div>
+            </div>
+            <form action="" class="contact-form">
+                <div class="inputs-wrp">
+                    <div class="input-wrp">
+                        <p class="form-subitle">Как Вас зовут?</p>
+                        <input class="form-input" type="text" placeholder="Иванов Иван Иванович" name="" value="">
+                    </div>
+                    <div class="input-wrp">
+                        <p class="form-subitle">Номер телефона</p>
+                        <input class="form-input form-input-phone" type="tel" name="" value="" placeholder="+7 (___) ___-__-__">
+                    </div>
+                </div>
+                <div class="input-wrp">
+                    <p class="form-subitle">Комментарий</p>
+                    <textarea class="form-input form-input-textarea" name="comment" rows="" cols=""></textarea>
+                </div>
+                <div class="btn-wrp gold-gradient">
+                    <input class="send-order-btn " type="submit" name="" value="">
+                </div>
+            </form>
+            <p class="copyright">© 2018 «Шкафы & Купе 77»</p>
+        </div>
+    </div>
+    <div class="map-block"></div>
+</section>
+
+                    <div class="overlay-dark"></div>
+                </div>
+                <div class="footer-wrapper">
+                    <!-- FileInjector:footer -->
+                </div>
+                <div class="pop-up-overlay-wrapper">
+                    <div class="overlay-pop-up"></div>
+                    <div class="pop-up-wrapper">
+    <!-- Manager's consultation -->
+    <div class="pop-up-consult">
+        <div class="pop-inner-send-order">
+            <p class="title">Консультация менеджера</p>
+            <p>Заполните форму и ожидайте звонка менеджера. <br> Он ответит на Ваши вопросы, сориентирует <br> по стоимости и согласует время выезда замерщика.</p>
+            <form action="" class="order-form">
+                <p class="form-subitle">Как Вас зовут?</p>
+                <input class="form-input" type="text" placeholder="Иванов Иван Иванович" name="" value="">
+                <p class="form-subitle">Номер телефона</p>
+                <input class="form-input form-input-phone" type="tel" name="" value="" placeholder="+7 (___) ___-__-__">
+                <input class="send-order-btn-pop-up gold-gradient" type="submit" name="" value="Отправить">
+            </form>
+            <p class="warning">Нажимая кнопку «Отправить», я даю согласие на <a href="#">обработку своих персональных данных</a></p>
+        </div>
+        <div class="pop-inner-thnx">
+            <div class="thnx-content">
+                <p class="title-thnx">Спасибо за обращение!</p>
+                <p>В ближайшее время с Вами свяжется наш менеджер</p>
+            </div>
+        </div>
+        <div class="btn-close-pop-up gold-gradient"></div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="menu-wrapper">
+                <div class="menu-mob gold-gradient">
+    <div class="list-block">
+        <ul class="menu-list">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Мебельные решения</a></li>
+            <li><a href="#">О Компании</a></li>
+            <li><a href="#">Наши работы</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="current-page-title-block">
+        <p class="current-page-title"><span>Главная</span></p>
+    </div>
+    <div class="btn-close-menu-mob"></div>
+</div>
+  
+
+            </div>
+            <div class="header-wrapper">
+                <header class="header-mob">
+    <div class="logo-block">
+        <img src="../../build/img/logo.png" alt="logo" class="logo-img">
+        <p>Шкафы & Кухни</p>
+    </div>
+    <div class="contact-menu-block">
+        <div class="btn-calc-value"></div>
+        <img src="../../build/img/call.svg" alt="phone" class="phone-img">
+        <div class="menu-burger-substrate">
+            <div class="menu-burger-wrp">
+                <div class="menu-burger"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header-mob header-mob-fixed">
+    <div class="logo-block">
+        <img src="../../build/img/logo.png" alt="logo" class="logo-img">
+        <p>Шкафы & Кухни</p>
+    </div>
+    <div class="contact-menu-block">
+        <div class="btn-calc-value"></div>
+        <img src="../../build/img/call.svg" alt="phone" class="phone-img">
+        <div class="menu-burger-substrate">
+            <div class="menu-burger-wrp">
+                <div class="menu-burger"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            </div>
+            <div class="pages-wrapper">
+                <section class="contact-mob">
+    <div class="content-mob">
+        <p class="catalog-title">Контакты</p>
+        <div class="phone-mail-wrp">
+            <div class="phone-mail phone">
+                <p>8 (800) 800 80 80</p>
+                <p>С 00:00 — до 00:00</p>
+            </div>
+            <div class="phone-mail mail">
+                <p>shkafikuhni77@mail.ru</p>
+                <a href="mailto:shkafikuhni77@mail.ru">Напишите нам на почту</a>
+            </div>
+            <div class="phone-mail map">
+                <p>Г. Нью-Йорк,<br>ул. Мейден-Лен 23</p>
+            </div>
+        </div>
+        <div class="contact-form-mob-wrp">
+            <form action="" class="contact-form-mob">
+                <div class="inputs-wrp">
+                    <div class="input-wrp">
+                        <p class="form-subitle">Как Вас зовут?</p>
+                        <input class="form-input" type="text" placeholder="Иванов Иван Иванович" name="user-name" value="">
+                    </div>
+                    <div class="input-wrp">
+                        <p class="form-subitle">Номер телефона</p>
+                        <input class="form-input form-input-phone" type="tel" name="user-phone" value="" placeholder="+7 (___) ___-__-__">
+                    </div>
+                </div>
+                <div class="input-wrp">
+                    <p class="form-subitle">Комментарий</p>
+                    <textarea class="form-input form-input-textarea" name="comment" rows="" cols=""></textarea>
+                </div>
+                <input class="send-order-btn gold-gradient" type="submit" name="" value="Отправить">
+            </form>
+        </div>
+        <p class="warning">Нажимая кнопку «Отправить», я даю согласие <br>на <a href="#">обработку своих персональных данных</a></p>
+    </div>
+    <footer class="footer-mob">
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>© 2018 «Шкафы & Купе 77»</p>
+                <p>Сделано в <a href="https://simplexx.agency/">Simplexx.Agency</a></p>
+            </div>
+        </div>
+    </footer>
+</section>
+
+            </div>
+            <div class="footer-wrapper">
+                <!-- FileInjector:footerMob -->
+            </div>
+            <div class="pop-up-overlay-wrapper">
+                <div class="overlay-pop-up"></div>
+                <div class="pop-up-wrapper-mob">
+    <!-- Manager's consultation -->
+    <div class="pop-up-consult">
+        <div class="pop-inner-send-order">
+            <p class="title">Консультация менеджера</p>
+            <form action="" class="order-form">
+                <p class="form-subitle">Как Вас зовут?</p>
+                <input class="form-input" type="text" placeholder="Иванов Иван Иванович" name="" value="">
+                <p class="form-subitle">Номер телефона</p>
+                <input class="form-input form-input-phone" type="tel" name="" value="" placeholder="+7 (___) ___-__-__">
+                <input class="send-order-btn-pop-up gold-gradient" type="submit" name="" value="Отправить">
+            </form>
+            <p class="warning">Нажимая кнопку «Отправить», я даю согласие на <a href="#">обработку своих персональных данных</a></p>
+        </div>
+
+        <div class="pop-inner-thnx">
+            <div class="thnx-content">
+                <p class="title-thnx">Спасибо!</p>
+                <p>В ближайшее время с Вами <br> свяжется наш менеджер</p>
+            </div>
+        </div>
+        <div class="btn-close-pop-up gold-gradient"></div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+        <section class="mobi-rotate">
+            <p>Переверните телефон в вертикальное положение</p>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../build/js/swiper.min.js"></script>
+    <script src="../../build/js/bootstrap.min.js"></script>
+    <script src="../../build/libs/countdown/jquery.plugin.js"></script>
+    <script src="../../build/libs/countdown/jquery.countdown.js"></script>
+    <script src="../../build/libs/jquery.maskedinput.min.js"></script>
+    <script src="../../build/libs/selectize/selectize.min.js"></script>
+    <script src="../../build/libs/selectize/selectize.js"></script>
+    <script src="../../build/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
+    <script src="../../build/js/collector.js"></script>
+    <script src="../../build/js/main.js"></script>
+</body>
+</html>

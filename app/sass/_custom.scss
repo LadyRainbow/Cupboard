@@ -1,0 +1,50 @@
+%BTN {
+	position: relative;
+	display: inline-block;
+	height: 46px;
+	line-height: 44px;
+	font-family: 'gothamPro-bold';
+	font-size: 14px;
+	text-align: center;
+	z-index: 2;
+	padding: 0 25px;
+	border-radius: 21px;
+	cursor: pointer;
+}
+input {
+	font-family: 'gothamPro-regular';
+	color: #6f6e6e;
+  &::placeholder {
+      font-family: 'gothamPro-regular';
+      color: #6f6e6e;
+  }
+  &:focus {
+	  &::placeholder {
+	      color: transparent;
+	  }
+  }
+}
+
+.gold-gradient {
+    background-color: rgb(233,200,120);
+    background-image: -webkit-gradient(linear, 0deg, from(rgb(223,180,109)), to(rgb(233,200,120)));
+    background-image: -moz-linear-gradient(top, rgb(223,180,109) 0%, rgb(233,200,120) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(223,180,109) 0%, rgb(233,200,120) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(223,180,109) 0%, rgb(233,200,120) 100%);
+    background-image:      -o-linear-gradient(0deg, rgb(223,180,109), rgb(233,200,120)); /* Opera 11.10+ */
+    background:         linear-gradient(0deg, rgb(223,180,109), rgb(233,200,120));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='rgb(223,180,109)', EndColorStr='rgb(233,200,120)');
+}
+%title {
+	font-size: 30px;
+	line-height: 34px;
+	font-family: 'gothamPro-bold';
+	color: $black;
+}
+%titleMob {
+	font-size: 24px;
+	line-height: 28px;
+	font-family: 'gothamPro-bold';
+	color: $black;
+	text-align: center;
+}

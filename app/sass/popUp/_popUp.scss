@@ -1,0 +1,153 @@
+.pop-up-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .btn-close-pop-up {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 3;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 19px;
+            left: calc(50% - 10px);
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+    p {
+        color: $grayFont;
+    }
+    .pop-up-consult {
+        display: none;
+        position: relative;
+        width: 750px;
+        height: 520px;
+        background-color: #fff;
+        box-shadow: 0px 15px 28px 0px rgba(0, 0, 0, 0.1);
+        z-index: 6;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 272px;
+            height: 483px;
+            bottom: 0;
+            right: 60px;
+            background: url('../img/popup/girl.png') center no-repeat;
+            background-size: cover;
+        }
+        .pop-inner-send-order {
+            display: none;
+            position: relative;
+            height: 100%;
+            padding-top: 47px;
+            padding-left: 70px;
+            z-index: 2;
+            .title {
+                @extend %title;
+                padding-bottom: 19px;
+            }
+            .order-form {
+                padding-left: 2px;
+                padding-top: 32px;
+                 .form-subitle {
+                    font-family: 'gothamPro-bold';
+                    line-height: 26px;
+                    color: #cca464;
+                    padding-bottom: 3px;
+                }
+                .form-input {
+                    width: 260px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: #dfdfdf;
+                    border-radius: 4px;
+                    background-color: white;
+                    height: 50px;
+                    padding: 0 19px;
+                    line-height: 16px;
+                    color: #6f6e6e;
+                    & + .form-subitle {
+                        padding-top: 16px;
+                    }
+                    &:focus {
+                        border-color: $goldBorder;
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                .send-order-btn-pop-up {
+                    @extend %BTN;
+                    color: #ffffff;
+                    margin-top: 44px;
+                    width: 260px;
+                    display: block;
+                }
+            }
+            .warning {
+                position: absolute;
+                bottom: -42px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                line-height: 18px;
+                color: $white;
+                opacity: .8;
+                a {
+                    display: inline-block;
+                    border-bottom: 1px solid rgba(223, 180, 109, 1);
+                }
+            }
+        }
+        .pop-inner-thnx {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 70px;
+            height: 100%;
+            .thnx-content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .title-thnx {
+                font-size: 30px;
+                font-family: 'gothamPro-bold';
+                color: $goldFont;
+                padding-bottom: 15px;
+            }
+
+        }
+    }
+
+}
+.mCustomScrollBox > .mCSB_scrollTools {
+    opacity: 1;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 3px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    width: 3px;
+    background: #cca464;
+}

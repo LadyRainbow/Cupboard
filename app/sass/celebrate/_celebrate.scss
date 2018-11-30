@@ -1,0 +1,122 @@
+section.celebrate {
+    // display: flex;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    .celebrate-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(30, 30, 37);
+        opacity: 0.8;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('../img/confetti.png') center;
+            background-size: cover;
+        }
+    }
+    .celebrate-block {
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 15px 28px 0px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        width: 750px;
+        height: 418px;
+        padding: 50px;
+        padding-left: 70px;
+        .title {
+            @extend %title;
+            padding-bottom: 16px;
+        }
+        .text {
+            color: $grayFont;
+            span {
+                font-family: 'gothamPro-bold';
+                color: $black;
+            }
+        }
+        .promo-code-wrp {
+            margin-top: 38px;
+            margin-bottom: 40px;
+            p {
+                color: $grayFont;
+                padding-bottom: 4px;
+            }
+            .promo-code {
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgba(223, 180, 109, 0.7);
+                border-radius: 4px;
+                background-color: rgb(255, 255, 255);
+                height: 50px;
+                width: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    color: $black;
+                    font-size: 30px;
+                    font-family: 'gothamPro-bold';
+                }
+            }
+        }
+        .remain {
+            color: $goldFont;
+            font-family: 'gothamPro-bold';
+            line-height: 26px;
+        }
+        .phone {
+            font-size: 18px;
+            color: $black;
+            font-family: 'gothamPro-bold';
+            line-height: 24px;
+        }
+        .btn-close-pop-up {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 3;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 19px;
+                left: calc(50% - 10px);
+                width: 20px;
+                height: 2px;
+                background-color: #fff;
+            }
+            &::before {
+                transform: rotate(-45deg);
+            }
+            &::after {
+                transform: rotate(-\45deg);
+            }
+        }
+        &::after {
+            position: absolute;
+            content: url('../img/celebrate-girl.png');
+            width: 303px;
+            height: 398px;
+            bottom: 0;
+            right: 9px;
+        }
+    }
+}

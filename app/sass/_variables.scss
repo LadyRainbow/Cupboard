@@ -1,0 +1,29 @@
+// mixin for counting
+@mixin calc-width($property, $value) {
+    #{$property}: calc(#{$value} * 100vw / 1144);
+}
+@mixin calc-height($property, $value) {
+    #{$property}: calc(#{$value} * 100vh / 700);
+}
+@mixin calc-heightMob($property, $value) {
+    #{$property}: calc(#{$value} * 100vh / 497);
+}
+
+// mixin for gradient
+@mixin linear-gradient($direction, $fromColor, $toColor){
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $fromColor, $toColor); /* Opera 11.10+ */
+  background:         linear-gradient($direction, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+// colors
+$white: #ffffff;
+$goldFont: #cca464;
+$black: #1e1e25;
+$grayFont: #6f6e6e;
+$goldBorder: #e9ca99;

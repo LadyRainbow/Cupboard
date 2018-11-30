@@ -1,0 +1,143 @@
+.desctop footer {
+    width: 100%;
+    padding-top: 23px;
+    position: relative;
+    width: calc(100% - 71px);
+    .footer-img-wrp {
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: 100vw;
+        height: 100%;
+        background-color: #f7f7f7;
+    }
+    .footer-content-wrp {
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            background-color: #fff;
+            width: 651px;
+            padding: 45px 0 0 40px;
+            .title {
+                @extend %title;
+                padding-bottom: 20px;
+            }
+            p {
+                color: $grayFont;
+            }
+            .ring-block {
+                position: relative;
+                margin-top: 32px;
+                margin-bottom: 64px;
+                padding-left: 61px;
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    font-family: 'gothamPro-bold';
+                    &:first-child {
+                        font-size: 18px;
+                        color: $black;
+                    }
+                    &:last-child {
+                        color: $goldFont;
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: url('../img/ring.png');
+                }
+            }
+            .footer-bottom {
+                width: 100%;
+                height: 78px;
+                border-top: 1px solid #e5e5e5;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 12px;
+                a {
+                    color: $goldFont;
+                    display: inline-block;
+                    border-bottom: 1px solid #e9ca99;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -388px;
+                width: 362px;
+                height: 355px;
+                background: url('../img/footer-girl.png') center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+.mobile {
+    footer.footer-mob {
+        padding-top: 48px;
+        background-color: #fff;
+        .title-mob {
+            @extend %titleMob;
+            padding-bottom: 20px;
+        }
+        .girl-block {
+            position: relative;
+            padding-top: 34px;
+            width: 100%;
+            height: 360px;
+            background-color: #f7f7f7;
+            p {
+                font-family: 'gothamPro-bold';
+                &:first-child {
+                    font-size: 18px;
+                    color: $black;
+                    padding-bottom: 9px;
+                }
+                &:nth-child(2) {
+                    color: $goldFont;
+                    line-height: 20px;
+                }
+            }
+            img.footer-girl {
+                position: absolute;
+                height: 356px;
+                bottom: 0;
+                right: -70px;
+                max-width: none;
+            }
+        }
+        .footer-bottom {
+            border-top: 1px solid rgb(229, 229, 229);
+            height: 81px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .footer-bottom-content {
+                font-size: 12px;
+                line-height: 20px;
+                p {
+                    text-align: center;
+                    a {
+                        color: $goldFont;
+                    }
+                }
+            }
+        }
+        &.padding-for-fixed-btn {
+            padding-bottom: 46px;
+        }
+    }
+}

@@ -1,0 +1,210 @@
+.desctop header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    height: 71px;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #e6e6e6;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        height: 47px;
+        .logo-block {
+            display: flex;
+            align-items: center;
+            .logo-img {
+                height: 47px;
+                margin-right: 12px;
+            }
+            p {
+                font-family: 'geometria-bold';
+                font-size: 18px;
+                color: $goldFont;
+                line-height: 1.111;
+            }
+        }
+        .contacts-block {
+            display: flex;
+            height: 100%;
+            .phone-wrp, .schedule-wrp {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .ring {
+                    position: relative;
+                    height: 100%;
+                    width: 47px;
+                    border: 1px solid $goldBorder;
+                    border-radius: 50%;
+                    line-height: 45px;
+                    .phone-img {
+                        height: 18px;
+                        transform: rotate(10deg);
+                    }
+                    span {
+                        font-family: 'gothamPro-bold';
+                        color: $goldFont;
+                    }
+                }
+                .ring-text {
+                    font-family: 'gothamPro-bold';
+                    line-height: 22px;
+                    color: $black;
+                    background-color: $white;
+                    position: relative;
+                }
+            }
+            .phone-wrp {
+                .ring {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .ring-text {
+                    transform: translateX(-7px);
+                }
+            }
+            .schedule-wrp {
+                .ring {
+                    margin-left: 20px;
+                    text-align: right;
+                    span {
+                        padding-right: 3px;
+                    }
+                }
+                .ring-text {
+                    padding-left: 10px;
+                    transform: translateX(-4px);
+                }
+            }
+            .btn-order-call {
+                @extend %BTN;
+                color: $goldFont;
+                border: 1px solid $goldBorder;
+                margin-left: 100px;
+            }
+        }
+    }
+    &.header-fixed {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 71px;
+        width: calc(100% - 71px);
+        background-color: #fff;
+        z-index: 12;
+        .header {
+            .contacts-block {
+                .btns-header-wrp {
+                    display: flex;
+                    align-items: center;
+                    .btn-order-call {
+                        margin-left: 74px;
+                    }
+                    .btn-calc-value {
+                        @extend %BTN;
+                        color: $white;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+        &.compensate-for-scrollbar {
+            padding-right: 17px;
+        }
+        &.header-fixed-show {
+            display: flex;
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+.mobile {
+    header.header-mob {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5vw;
+        border-bottom: 1px solid rgb(229, 229, 229);
+        .logo-block {
+            display: flex;
+            align-items: center;
+            .logo-img {
+                height: 36px;
+                margin-right: 6px;
+            }
+            p {
+                font-family: 'geometria-bold';
+                font-size: 16px;
+                color: $black;
+            }
+        }
+        .contact-menu-block {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .btn-calc-value {
+                font-family: 'line-awesome';
+                color: #e9c878;
+                font-size: 35px;
+                margin-right: 5px;
+            }
+            .phone-img {
+                height: 20px;
+                margin-right: 10px;
+            }
+            .menu-burger-substrate {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 50px;
+                background-image: -moz-linear-gradient( 180deg, rgb(233,200,120) 0%, rgb(223,180,109) 100%);
+                background-image: -webkit-linear-gradient( 180deg, rgb(233,200,120) 0%, rgb(223,180,109) 100%);
+                background-image: -ms-linear-gradient( 180deg, rgb(233,200,120) 0%, rgb(223,180,109) 100%);
+                .menu-burger-wrp {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 12px;
+                    width: 26px;
+                    .menu-burger {
+                        position: relative;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #fff;
+                    }
+                    &:before, &::after  {
+                        position: absolute;
+                        content: '';
+                        right: 0;
+                        height: 2px;
+                        background-color: #fff;
+                    }
+                    &::before {
+                        top: 0;
+                        width: 100%;
+                    }
+                    &::after {
+                        bottom: 0;
+                        width: 16px;
+                    }
+                }
+            }
+        }
+        &.header-mob-fixed {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            background-color: #fff;
+        }
+    }
+}

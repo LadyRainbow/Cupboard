@@ -1,0 +1,715 @@
+.collector-overlay-wrapper {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 16;
+    .overlay-pop-up {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #1e1e1e;
+        z-index: 5;
+        opacity: .9;
+    }
+}
+.btn-close-pop-up {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 19px;
+        left: calc(50% - 10px);
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+    }
+    &::before {
+        transform: rotate(-45deg);
+    }
+    &::after {
+        transform: rotate(45deg);
+    }
+    @media screen and (max-width: 1223px) and (min-width: 320px) {
+        top: 0;
+        right: 0;
+    }
+}
+.collectorStepsIndicatorWrapper > div.hidden {
+    display: none;
+}
+.collectorNextStepBtn.hidden {
+    display: none;
+}
+.collectorStep {
+    display: none;
+}
+.collectorStep.active {
+    display: block;
+}
+.collector {
+    padding-top: 48px;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    width: 880px;
+    height: 534px;
+    font-size: 14px;
+    color: $grayFont;
+    @media screen and (max-width: 1223px) and (min-width: 320px) {
+        width: 100%;
+        height: 100%;
+    }
+    .collectorStep.first-card {
+        padding-top: 36px;
+        width: 373px;
+        margin: 0 auto;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            width: auto;
+            text-align: center;
+        }
+        .itemForStep1 {
+            display: inline-block;
+            text-align: center;
+            color: $black;
+            font-family: 'gothamPro-bold';
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                margin-bottom: 12px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            &:first-child {
+                padding-right: 27px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    padding-right: 10px;
+                }
+            }
+            &:last-child {
+                padding-left: 26px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    padding-left: 10px;
+                }
+            }
+            &:hover {
+                img {
+                    border: 2px solid #cca464;
+                }
+                color: #cca464;
+                cursor: pointer;
+            }
+            &.active {
+                img {
+                    border: 2px solid #cca464;
+                }
+                color: #cca464;
+            }
+        }
+    }
+    .collectorStep.second-card {
+        padding-top: 36px;
+        width: 700px;
+        margin: 0 auto;
+        justify-content: space-between;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            width: 280px;
+            padding-top: 0;
+        }
+        .itemForStep2 {
+            display: inline-block;
+        }
+        &.active {
+            display: flex;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                display: block;
+                text-align: center;
+            }
+        }
+        .itemForStep2 {
+            position: relative;
+            z-index: 15;
+            cursor: pointer;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: 100px;
+                vertical-align: top;
+                &:nth-child(odd) {
+                    margin-right: 25px;
+                }
+            }
+            div {
+                text-align: center;
+                p {
+                    position: relative;
+                    text-align: left;
+                    display: inline-block;
+                    font-family: 'gothamPro-bold';
+                    color: $black;
+                    padding-left: 32px;
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 2px solid #e7e7e7;
+                        box-sizing: border-box;
+                    }
+                    &::after {
+                        position: absolute;
+                        left: 7px;
+                        top: 7px;
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: transparent;
+                    }
+                }
+            }
+            &.active {
+                div {
+                    p {
+                        color: $goldFont;
+                        &::after {
+                            background-color: #cca464;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                div {
+                    p {
+                        color: $goldFont;
+                    }
+                }
+            }
+        }
+    }
+    .collectorStep.third-card {
+        .card-content-wrp {
+            width: 520px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: 280px;
+                justify-content: space-between;
+            }
+            .sizesWrapper {
+                width: 385px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                margin: 0 auto;
+                padding-top: 64px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    padding-top: 10px;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 55px;
+                }
+                .notKnownSizesBtn {
+                    position: absolute;
+                    left: 0;
+                    bottom: -50px;
+                    cursor: pointer;
+                    @media screen and (max-width: 1223px) and (min-width: 320px) {
+                        width: 220px;
+                        left: inherit;
+                        right: 0;
+                        bottom: 0px;
+                    }
+                    p {
+                        position: relative;
+                        text-align: left;
+                        display: inline-block;
+                        font-family: 'gothamPro-bold';
+                        color: $black;
+                        padding-left: 32px;
+                        line-height: 24px;
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            content: '';
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            border: 2px solid #e7e7e7;
+                            box-sizing: border-box;
+                        }
+                        &::after {
+                            position: absolute;
+                            left: 7px;
+                            top: 7px;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: transparent;
+                        }
+                    }
+                    &.active {
+                        p {
+                            color: #cca464;
+                            &::after {
+                                background-color: #cca464;
+                            }
+                        }
+                    }
+                    &:hover {
+                        p {
+                            color: #cca464;
+                        }
+                    }
+                }
+                .itemForStep3 {
+                    & + .itemForStep3 {
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            padding-top: 5px;
+                        }
+                    }
+                    p {
+                        font-family: 'gothamPro-bold';
+                        color: $black;
+                        padding-bottom: 5px;
+                    }
+                    input {
+                        width: 90px;
+                        height: 50px;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: #dfdfdf;
+                        border-radius: 4px;
+                        background-color: rgb(255, 255, 255);
+                        text-align: center;
+                        font-size: 16px;
+                        padding-left: 14px;
+                        &:focus {
+                            border-color: rgba(223, 180, 109, 0.7);
+                        }
+                        &.disabled {
+                            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHUlEQVQYV2NkgIL79+//ZwSxQQxFRUVGRhgDJAgA3AMLoCO/IjMAAAAASUVORK5CYII=') repeat;
+                        }
+                    }
+                    div {
+                        position: relative;
+                        &::after {
+                            content: 'см';
+                            position: absolute;
+                            right: -25px;
+                            top: calc(50% - 8px);
+                        }
+                    }
+                }
+            }
+            .img-kitchen-wrp {
+                width: 160px;
+                padding-top: 40px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    width: 120px;
+                    padding-top: 0px;
+                }
+                & + .sizesWrapper {
+                    width: 255px;
+                    margin: 0;
+                    @media screen and (max-width: 1223px) and (min-width: 320px) {
+                        width: 140px;
+                    }
+                }
+            }
+
+        }
+    }
+    .collectorStep.fourth-card {
+        position: relative;
+        height: 264px;
+        justify-content: space-between;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            height: 280px;
+        }
+        .collectorDynamicContentWrapperStep4 {
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0 auto;
+            height: 22px;
+            margin-top: 42px;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: 320px;
+            }
+            .itemForStep4 {
+                cursor: pointer;
+                .material-title {
+                    position: relative;
+                    font-family: 'gothamPro-bold';
+                    color: $black;
+                    padding-left: 32px;
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 2px solid #e7e7e7;
+                        box-sizing: border-box;
+                    }
+                    &::after {
+                        position: absolute;
+                        left: 7px;
+                        top: 7px;
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: transparent;
+                    }
+                }
+                &.active {
+                    .material-title {
+                        color: $goldFont;
+                        &::after {
+                            background-color: #cca464;
+                        }
+                    }
+                }
+                &:hover {
+                    .material-title {
+                        color: $goldFont;
+                    }
+                }
+            }
+        }
+        .scrolls-wrp {
+            position: absolute;
+            left: calc(50% - 341px);
+            bottom: 15px;
+            width: 682px;
+            height: 182px;
+            overflow: hidden;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: 282px;
+                left: calc(50% - 141px);
+                height: 210px;
+                bottom: 0;
+            }
+            .scroll-wrp {
+                position: absolute;
+                left: 10px;
+                top: 11px;
+                width: 662px;
+                max-height: 162px;
+                background-color: #fff;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(235, 235, 235);
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.1);
+                padding: 26px 30px 20px 32px;
+                display: none;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    padding: 12px;
+                    width: 280px;
+                    left: 0;
+                    height: 195px;
+                    max-height: 195px;
+                }
+                .scroll-title {
+                    color: $black;
+                    font-family: 'gothamPro-bold';
+                    padding-bottom: 7px;
+                }
+                .description {
+                    padding-right: 40px;
+                    @media screen and (max-width: 1223px) and (min-width: 320px) {
+                        padding-right: 0;
+                    }
+                }
+                &.active {
+                    display: block;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -13px;
+                    width: 0;
+                    height: 0;
+                    border-left: 13px solid transparent;
+                    border-right: 13px solid transparent;
+                    border-bottom: 13px solid #ededed;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -11px;
+                    width: 0;
+                    height: 0;
+                    border-left: 11px solid transparent;
+                    border-right: 11px solid transparent;
+                    border-bottom: 11px solid $white;
+                }
+                &.MDF-scroll {
+                    &::before {
+                        left: 164px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 10px;
+                        }
+                    }
+                    &::after {
+                        left: 166px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 12px;
+                        }
+                    }
+                }
+                &.chipboard-scroll {
+                    &::before {
+                        left: 153px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 20px;
+                        }
+                    }
+                    &::after {
+                        left: 155px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 22px;
+                        }
+                    }
+                }
+                &.plastic-scroll {
+                    &::before {
+                        left: 321px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 100px;
+                        }
+                    }
+                    &::after {
+                        left: 323px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 102px;
+                        }
+                    }
+                }
+                &.glass-scroll {
+                    &::before {
+                        left: 292px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 122px;
+                        }
+                    }
+                    &::after {
+                        left: 294px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 124px;
+                        }
+                    }
+                }
+                &.membrane-scroll {
+                    &::before {
+                        left: 500px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 210px;
+                        }
+                    }
+                    &::after {
+                        left: 502px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 212px;
+                        }
+                    }
+                }
+                 &.combined-scroll {
+                    &::before {
+                        left: 485px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 248px;
+                        }
+                    }
+                    &::after {
+                        left: 487px;
+                        @media screen and (max-width: 1223px) and (min-width: 320px) {
+                            left: 250px;
+                        }
+                    }
+                }
+            }
+        }
+        &.active {
+            display: flex;
+        }
+    }
+    .collectorStep.form-block {
+        position: relative;
+        margin-top: 38px;
+        width: 411px;
+        padding-left: 150px;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            width: 320px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-subitle {
+            font-family: 'gothamPro-bold';
+            line-height: 26px;
+            color: #cca464;
+            padding-bottom: 4px;
+        }
+        .form-input {
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #dfdfdf;
+            border-radius: 4px;
+            background-color: white;
+            height: 50px;
+            padding: 0 19px;
+            line-height: 16px;
+            color: #6f6e6e;
+            &  + .form-subitle {
+                padding-top: 17px;
+            }
+            &:focus {
+                border-color: $goldBorder;
+            }
+        }
+        .collectorSendBtn {
+            @extend %BTN;
+            color: $white;
+            margin-top: 44px;
+            width: 100%;
+        }
+         .warning {
+            position: absolute;
+            bottom: -84px;
+            left: 0;
+            width: 880px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            color: #ffffff;
+            opacity: .8;
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: inherit;
+                color: $black;
+                bottom: -20px;
+            }
+            a {
+                display: inline-block;
+                border-bottom: 1px solid #dfb46d;
+            }
+        }
+        &::after {
+            content: url('../img/popup/collector-girl.png');
+            position: absolute;
+            right: -313px;
+            top: 0;
+        }
+    }
+    .collectorName {
+        @extend %title;
+        text-align: center;
+        margin-bottom: 24px;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            font-size: 24px;
+            line-height: 22px;
+            width: 320px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+    .collectorStepsIndicatorWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        div {
+            width: 80px;
+            height: 4px;
+            background-color: rgb(227, 227, 227);
+            &.active {
+                background-color: #cca464;
+            }
+            & + div {
+                margin-left: 16px;
+                @media screen and (max-width: 1223px) and (min-width: 320px) {
+                    margin-left: 10px;
+                }
+            }
+            @media screen and (max-width: 1223px) and (min-width: 320px) {
+                width: 50px;
+            }
+        }
+    }
+    .collectorStepCounterName {
+        margin-top: 26px;
+        margin-bottom: 7px;
+        text-align: center;
+        font-family: 'gothamPro-bold';
+        color: $black;
+    }
+    .collectorStepActionName {
+        text-align: center;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            width: 320px;
+            margin: 0 auto;
+        }
+    }
+    .collectorNextStepBtn {
+        @extend %BTN;
+        width: 320px;
+        position: absolute;
+        left: calc(50% - 160px);
+        bottom: 50px;
+        padding-left: 37px;
+        padding-right: 36px;
+        text-align: left;
+        @media screen and (max-width: 1223px) and (min-width: 320px) {
+            width: 280px;
+            padding-left: 20px;
+            padding-right: 20px;
+            left: calc(50% - 140px);
+            bottom: 35px;
+        }
+        p {
+            position: relative;
+            color: $white;
+            line-height: 46px;
+            &::after {
+                position: absolute;
+                top: 1px;
+                right: 0;
+                content: '\f274';
+                font-family: 'line-awesome';
+                font-size: 24px;
+            }
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
